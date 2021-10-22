@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izI-KD-SeR">
+                                <rect key="frame" x="20" y="74" width="374" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="hRH-Wl-4Nj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jl1-BW-c3W"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MCZ-eF-r56"/>
+                                </connections>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0g-n5-7FW">
+                                <rect key="frame" x="20" y="377" width="374" height="455"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택된 파일 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0k-nU-iAW">
+                                <rect key="frame" x="20" y="320" width="116" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSE-T8-7LI">
+                                <rect key="frame" x="151" y="320" width="243" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y0g-n5-7FW" firstAttribute="trailing" secondItem="izI-KD-SeR" secondAttribute="trailing" id="0rZ-be-R37"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="izI-KD-SeR" secondAttribute="trailing" constant="20" id="37n-bv-sqe"/>
+                            <constraint firstItem="QSE-T8-7LI" firstAttribute="centerY" secondItem="x0k-nU-iAW" secondAttribute="centerY" id="6Qu-W0-j1a"/>
+                            <constraint firstItem="x0k-nU-iAW" firstAttribute="top" secondItem="izI-KD-SeR" secondAttribute="bottom" constant="30" id="Bne-Sa-9dr"/>
+                            <constraint firstItem="Y0g-n5-7FW" firstAttribute="leading" secondItem="izI-KD-SeR" secondAttribute="leading" id="JW6-A5-Oxf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y0g-n5-7FW" secondAttribute="bottom" constant="30" id="SpQ-2k-Q9S"/>
+                            <constraint firstItem="QSE-T8-7LI" firstAttribute="trailing" secondItem="izI-KD-SeR" secondAttribute="trailing" id="X4u-wI-RqH"/>
+                            <constraint firstItem="QSE-T8-7LI" firstAttribute="leading" secondItem="x0k-nU-iAW" secondAttribute="trailing" constant="15" id="ZQE-JX-ls1"/>
+                            <constraint firstItem="x0k-nU-iAW" firstAttribute="leading" secondItem="izI-KD-SeR" secondAttribute="leading" id="j1d-Bj-Kaj"/>
+                            <constraint firstItem="izI-KD-SeR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kdl-7N-SXh"/>
+                            <constraint firstItem="izI-KD-SeR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="lVb-RK-Ezp"/>
+                            <constraint firstItem="Y0g-n5-7FW" firstAttribute="top" secondItem="x0k-nU-iAW" secondAttribute="bottom" constant="30" id="uIa-hO-Mec"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="71"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
