@@ -1,2 +1,3 @@
 # 211021_doitswift
-📘 [개인공부 - 책] Do it! 스위프트로 아이폰 앱 만들기(개정5판)
+- 📘 [개인공부 - 책] Do it! 스위프트로 아이폰 앱 만들기(개정5판)
+- [<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e746d53d-2b1f-4817-b5d6-ac1d4a82acb0/notion.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20211007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211007T155816Z&X-Amz-Expires=86400&X-Amz-Signature=c33f81e9d7a943867e4ea9781abfb0cd2be9225ce1a91d4ada39626b343a03d7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22notion.svg%22" width=18px/> 노션 - 책 내용 정리](https://jhcode.notion.site/211021-Do-it-61bd728e25e04d3e917e6f620b02805d)
