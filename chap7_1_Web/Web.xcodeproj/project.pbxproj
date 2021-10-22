@@ -13,6 +13,7 @@
 		68120E752722D2FC000B210F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68120E732722D2FC000B210F /* Main.storyboard */; };
 		68120E772722D2FC000B210F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68120E762722D2FC000B210F /* Assets.xcassets */; };
 		68120E7A2722D2FC000B210F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68120E782722D2FC000B210F /* LaunchScreen.storyboard */; };
+		68120E842722EFC5000B210F /* htmlView.html in Resources */ = {isa = PBXBuildFile; fileRef = 68120E832722EFC5000B210F /* htmlView.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		68120E762722D2FC000B210F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68120E792722D2FC000B210F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68120E7B2722D2FC000B210F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68120E832722EFC5000B210F /* htmlView.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = htmlView.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				68120E762722D2FC000B210F /* Assets.xcassets */,
 				68120E782722D2FC000B210F /* LaunchScreen.storyboard */,
 				68120E7B2722D2FC000B210F /* Info.plist */,
+				68120E832722EFC5000B210F /* htmlView.html */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68120E842722EFC5000B210F /* htmlView.html in Resources */,
 				68120E7A2722D2FC000B210F /* LaunchScreen.storyboard in Resources */,
 				68120E772722D2FC000B210F /* Assets.xcassets in Resources */,
 				68120E752722D2FC000B210F /* Main.storyboard in Resources */,
