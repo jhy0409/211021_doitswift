@@ -61,7 +61,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return imageView
     }
     
-    // 피커뷰 선택시 시랳ㅇ
+    // 피커뷰 선택시 실행
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         lblImageFileName.text = imageFileName[row]
         imageView.image = imageArray[row]

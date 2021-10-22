@@ -26,17 +26,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="MCZ-eF-r56"/>
                                 </connections>
                             </pickerView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0g-n5-7FW">
-                                <rect key="frame" x="20" y="377" width="374" height="455"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0g-n5-7FW">
+                                <rect key="frame" x="20" y="373.5" width="374" height="458.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택된 파일 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0k-nU-iAW">
-                                <rect key="frame" x="20" y="320" width="116" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSE-T8-7LI">
+                                <rect key="frame" x="186" y="320" width="208" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSE-T8-7LI">
-                                <rect key="frame" x="151" y="320" width="243" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Item : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIA-5o-UrB">
+                                <rect key="frame" x="20" y="320" width="146" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,18 +47,23 @@
                         <constraints>
                             <constraint firstItem="Y0g-n5-7FW" firstAttribute="trailing" secondItem="izI-KD-SeR" secondAttribute="trailing" id="0rZ-be-R37"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="izI-KD-SeR" secondAttribute="trailing" constant="20" id="37n-bv-sqe"/>
-                            <constraint firstItem="QSE-T8-7LI" firstAttribute="centerY" secondItem="x0k-nU-iAW" secondAttribute="centerY" id="6Qu-W0-j1a"/>
-                            <constraint firstItem="x0k-nU-iAW" firstAttribute="top" secondItem="izI-KD-SeR" secondAttribute="bottom" constant="30" id="Bne-Sa-9dr"/>
+                            <constraint firstItem="xIA-5o-UrB" firstAttribute="leading" secondItem="Y0g-n5-7FW" secondAttribute="leading" id="4xy-hb-OG3"/>
+                            <constraint firstItem="QSE-T8-7LI" firstAttribute="leading" secondItem="xIA-5o-UrB" secondAttribute="trailing" constant="20" id="E81-q1-oJg"/>
                             <constraint firstItem="Y0g-n5-7FW" firstAttribute="leading" secondItem="izI-KD-SeR" secondAttribute="leading" id="JW6-A5-Oxf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y0g-n5-7FW" secondAttribute="bottom" constant="30" id="SpQ-2k-Q9S"/>
+                            <constraint firstItem="xIA-5o-UrB" firstAttribute="centerY" secondItem="QSE-T8-7LI" secondAttribute="centerY" id="TJ8-YO-DUQ"/>
+                            <constraint firstItem="QSE-T8-7LI" firstAttribute="top" secondItem="izI-KD-SeR" secondAttribute="bottom" constant="30" id="UxP-Ba-ZAF"/>
                             <constraint firstItem="QSE-T8-7LI" firstAttribute="trailing" secondItem="izI-KD-SeR" secondAttribute="trailing" id="X4u-wI-RqH"/>
-                            <constraint firstItem="QSE-T8-7LI" firstAttribute="leading" secondItem="x0k-nU-iAW" secondAttribute="trailing" constant="15" id="ZQE-JX-ls1"/>
-                            <constraint firstItem="x0k-nU-iAW" firstAttribute="leading" secondItem="izI-KD-SeR" secondAttribute="leading" id="j1d-Bj-Kaj"/>
                             <constraint firstItem="izI-KD-SeR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kdl-7N-SXh"/>
                             <constraint firstItem="izI-KD-SeR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="lVb-RK-Ezp"/>
-                            <constraint firstItem="Y0g-n5-7FW" firstAttribute="top" secondItem="x0k-nU-iAW" secondAttribute="bottom" constant="30" id="uIa-hO-Mec"/>
+                            <constraint firstItem="Y0g-n5-7FW" firstAttribute="top" secondItem="xIA-5o-UrB" secondAttribute="bottom" constant="26.5" id="vBg-aS-AFt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageViewBottom" destination="Y0g-n5-7FW" id="pYW-wS-56c"/>
+                        <outlet property="lblImageFileName" destination="QSE-T8-7LI" id="FFW-13-Qvq"/>
+                        <outlet property="pickerImage" destination="izI-KD-SeR" id="jnL-qN-gK6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
