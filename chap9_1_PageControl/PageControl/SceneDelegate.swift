@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Map
+//  PageControl
 //
-//  Created by BeomGeun Lee on 2020/11/03.
+//  Created by inooph on 2021/10/23.
 //
 
 import UIKit
