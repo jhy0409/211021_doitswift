@@ -1,4 +1,5 @@
 # 211021_doitswift
+<img src="/thumbnail.jpg" width="40%" height="30%" title="Do it! 스위프트로 아이폰 앱 만들기(개정3판)" alt="RubberDuck"></img>
 - 📘 [개인공부 - 책] Do it! 스위프트로 아이폰 앱 만들기(개정3판) - 전체 656p
 - [<img src="https://raw.githubusercontent.com/jhy0409/jhy0409/9b83f40d3443d6f3fda66cba6eb05347de137bc2/9%20Tip/notion.svg" width=18px/> 노션 - 책 내용 정리](https://jhcode.notion.site/211021-Do-it-61bd728e25e04d3e917e6f620b02805d)
 
