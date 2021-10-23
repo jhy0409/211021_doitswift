@@ -13,6 +13,12 @@
 		688012482724281F00962D93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688012462724281F00962D93 /* Main.storyboard */; };
 		6880124A2724281F00962D93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688012492724281F00962D93 /* Assets.xcassets */; };
 		6880124D2724281F00962D93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6880124B2724281F00962D93 /* LaunchScreen.storyboard */; };
+		688012942724310A00962D93 /* 04.png in Resources */ = {isa = PBXBuildFile; fileRef = 6880128E2724310A00962D93 /* 04.png */; };
+		688012952724310A00962D93 /* 05.png in Resources */ = {isa = PBXBuildFile; fileRef = 6880128F2724310A00962D93 /* 05.png */; };
+		688012962724310A00962D93 /* 06.png in Resources */ = {isa = PBXBuildFile; fileRef = 688012902724310A00962D93 /* 06.png */; };
+		688012972724310A00962D93 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 688012912724310A00962D93 /* 02.png */; };
+		688012982724310A00962D93 /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = 688012922724310A00962D93 /* 03.png */; };
+		688012992724310A00962D93 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = 688012932724310A00962D93 /* 01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		688012492724281F00962D93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6880124C2724281F00962D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6880124E2724281F00962D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6880128E2724310A00962D93 /* 04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 04.png; sourceTree = "<group>"; };
+		6880128F2724310A00962D93 /* 05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 05.png; sourceTree = "<group>"; };
+		688012902724310A00962D93 /* 06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 06.png; sourceTree = "<group>"; };
+		688012912724310A00962D93 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
+		688012922724310A00962D93 /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
+		688012932724310A00962D93 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 		6880123F2724281F00962D93 /* PageControl */ = {
 			isa = PBXGroup;
 			children = (
+				688012542724293200962D93 /* images */,
 				688012402724281F00962D93 /* AppDelegate.swift */,
 				688012422724281F00962D93 /* SceneDelegate.swift */,
 				688012442724281F00962D93 /* ViewController.swift */,
@@ -65,6 +78,19 @@
 				6880124E2724281F00962D93 /* Info.plist */,
 			);
 			path = PageControl;
+			sourceTree = "<group>";
+		};
+		688012542724293200962D93 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				688012932724310A00962D93 /* 01.png */,
+				688012912724310A00962D93 /* 02.png */,
+				688012922724310A00962D93 /* 03.png */,
+				6880128E2724310A00962D93 /* 04.png */,
+				6880128F2724310A00962D93 /* 05.png */,
+				688012902724310A00962D93 /* 06.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +150,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688012992724310A00962D93 /* 01.png in Resources */,
+				688012952724310A00962D93 /* 05.png in Resources */,
+				688012962724310A00962D93 /* 06.png in Resources */,
 				6880124D2724281F00962D93 /* LaunchScreen.storyboard in Resources */,
+				688012972724310A00962D93 /* 02.png in Resources */,
+				688012982724310A00962D93 /* 03.png in Resources */,
+				688012942724310A00962D93 /* 04.png in Resources */,
 				6880124A2724281F00962D93 /* Assets.xcassets in Resources */,
 				688012482724281F00962D93 /* Main.storyboard in Resources */,
 			);
