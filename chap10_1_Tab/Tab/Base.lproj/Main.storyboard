@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="09u-JM-nk2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="File.png" translatesAutoresizingMaskIntoConstraints="NO" id="gCf-hc-Iae">
+                                <rect key="frame" x="20" y="123" width="374" height="670"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="98" translatesAutoresizingMaskIntoConstraints="NO" id="GBo-w4-y5E">
+                                <rect key="frame" x="20" y="64" width="374" height="39"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiR-dq-vIT">
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="이미지뷰로 이동"/>
+                                        <connections>
+                                            <action selector="btnMoveImageView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HuY-9j-G6y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9P-cq-4Tz">
+                                        <rect key="frame" x="237" y="0.0" width="137" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="피커뷰로 이동"/>
+                                        <connections>
+                                            <action selector="btnMoveDatePickerView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V2W-2L-EaC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="r9P-cq-4Tz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EiR-dq-vIT" secondAttribute="trailing" constant="20" id="yTA-cm-VSr"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GBo-w4-y5E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="I5B-IT-NTv"/>
+                            <constraint firstItem="GBo-w4-y5E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JYE-fv-PTJ"/>
+                            <constraint firstItem="gCf-hc-Iae" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PG6-EQ-pr3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gCf-hc-Iae" secondAttribute="bottom" constant="20" id="W5o-xx-VYV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GBo-w4-y5E" secondAttribute="trailing" constant="20" id="hkI-9S-1Nx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gCf-hc-Iae" secondAttribute="trailing" constant="20" id="tYq-Id-Ea5"/>
+                            <constraint firstItem="gCf-hc-Iae" firstAttribute="top" secondItem="GBo-w4-y5E" secondAttribute="bottom" constant="20" id="uGx-S9-ZFd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="LHx-2Q-akT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="-202.23214285714286"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Hsf-Pa-x1M">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAk-Pf-7Ii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="09u-JM-nk2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1nO-CV-LY5">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MDd-ox-7eo"/>
+                        <segue destination="FED-DI-hey" kind="relationship" relationship="viewControllers" id="mz7-Yi-6kt"/>
+                        <segue destination="kTO-sU-uww" kind="relationship" relationship="viewControllers" id="vBt-c7-n0m"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="70.982142857142847"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="RFG-Pi-KuE">
+            <objects>
+                <viewController id="FED-DI-hey" customClass="ImageViewController" customModule="Tab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8a4-OV-k90">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TwX-73-dzD">
+                                <rect key="frame" x="16" y="64" width="179" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-dy-bcD">
+                                <rect key="frame" x="101" y="746" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="확대"/>
+                                <connections>
+                                    <action selector="btnResizeImage:" destination="FED-DI-hey" eventType="touchUpInside" id="Ul8-RQ-tdJ"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3a-Fi-pS3">
+                                <rect key="frame" x="259" y="745" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchImageOnOff:" destination="FED-DI-hey" eventType="valueChanged" id="2Kx-Xu-Em4"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PzN-V1-baj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="dji-TD-dw7"/>
+                    <connections>
+                        <outlet property="btnResize" destination="fBg-dy-bcD" id="a7o-27-B90"/>
+                        <outlet property="imgView" destination="TwX-73-dzD" id="yfR-Y3-LAm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHx-4v-xTp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742" y="71"/>
+        </scene>
+        <!--Date View Controller-->
+        <scene sceneID="4vB-Ng-s3Y">
+            <objects>
+                <viewController id="kTO-sU-uww" customClass="DateViewController" customModule="Tab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Oj-eM-urJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재시간 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLh-BZ-ubt">
+                                <rect key="frame" x="20" y="107" width="374" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="hX9-ka-MMe">
+                                <rect key="frame" x="20" y="194" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ek7-QW-1N6"/>
+                                </constraints>
+                                <locale key="locale" localeIdentifier="ko"/>
+                                <connections>
+                                    <action selector="changeDatePicker:" destination="kTO-sU-uww" eventType="valueChanged" id="X99-Pm-Rig"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택시간 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wQ-l8-Z8k">
+                                <rect key="frame" x="20" y="450" width="374" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jTS-Qd-2Aj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RLh-BZ-ubt" firstAttribute="trailing" secondItem="hX9-ka-MMe" secondAttribute="trailing" id="3dr-Ch-aH8"/>
+                            <constraint firstItem="5wQ-l8-Z8k" firstAttribute="top" secondItem="hX9-ka-MMe" secondAttribute="bottom" constant="56" id="CTA-x1-FBC"/>
+                            <constraint firstItem="hX9-ka-MMe" firstAttribute="top" secondItem="RLh-BZ-ubt" secondAttribute="bottom" constant="60" id="Eqr-yi-q9l"/>
+                            <constraint firstItem="RLh-BZ-ubt" firstAttribute="top" secondItem="jTS-Qd-2Aj" secondAttribute="top" constant="63" id="Gtv-HT-3mL"/>
+                            <constraint firstItem="5wQ-l8-Z8k" firstAttribute="trailing" secondItem="hX9-ka-MMe" secondAttribute="trailing" id="Njr-Ou-N7c"/>
+                            <constraint firstItem="RLh-BZ-ubt" firstAttribute="leading" secondItem="hX9-ka-MMe" secondAttribute="leading" id="O6Y-L0-JBM"/>
+                            <constraint firstItem="jTS-Qd-2Aj" firstAttribute="trailing" secondItem="hX9-ka-MMe" secondAttribute="trailing" constant="20" id="Wtw-nh-rJp"/>
+                            <constraint firstItem="5wQ-l8-Z8k" firstAttribute="leading" secondItem="hX9-ka-MMe" secondAttribute="leading" id="k6A-Ef-TB2"/>
+                            <constraint firstItem="hX9-ka-MMe" firstAttribute="leading" secondItem="jTS-Qd-2Aj" secondAttribute="leading" constant="20" id="yDE-2x-r8c"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="c42-XX-yen"/>
+                    <connections>
+                        <outlet property="lblCurrentTime" destination="RLh-BZ-ubt" id="GUZ-8F-O71"/>
+                        <outlet property="lblPickerTime" destination="5wQ-l8-Z8k" id="WHH-S4-27k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bzt-IS-MKp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909" y="503"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="File.png" width="1280" height="1124"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
