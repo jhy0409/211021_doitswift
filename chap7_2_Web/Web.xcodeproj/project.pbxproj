@@ -13,6 +13,7 @@
 		688F41822723B7B5004927A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688F41802723B7B5004927A4 /* Main.storyboard */; };
 		688F41842723B7B6004927A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688F41832723B7B6004927A4 /* Assets.xcassets */; };
 		688F41872723B7B6004927A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688F41852723B7B6004927A4 /* LaunchScreen.storyboard */; };
+		688F418F2723BC85004927A4 /* htmlView.html in Resources */ = {isa = PBXBuildFile; fileRef = 688F418E2723BC85004927A4 /* htmlView.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		688F41832723B7B6004927A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688F41862723B7B6004927A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688F41882723B7B6004927A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688F418E2723BC85004927A4 /* htmlView.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = htmlView.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				688F41832723B7B6004927A4 /* Assets.xcassets */,
 				688F41852723B7B6004927A4 /* LaunchScreen.storyboard */,
 				688F41882723B7B6004927A4 /* Info.plist */,
+				688F418E2723BC85004927A4 /* htmlView.html */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688F418F2723BC85004927A4 /* htmlView.html in Resources */,
 				688F41872723B7B6004927A4 /* LaunchScreen.storyboard in Resources */,
 				688F41842723B7B6004927A4 /* Assets.xcassets in Resources */,
 				688F41822723B7B5004927A4 /* Main.storyboard in Resources */,
