@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wmG-9q-vU2">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wmG-9q-vU2">
                                 <rect key="frame" x="20" y="64" width="374" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="HZ3-W4-CnS"/>
@@ -25,6 +25,7 @@
                                     <segment title="현재위치"/>
                                     <segment title="폴리텍대학"/>
                                     <segment title="이지스 퍼블리싱"/>
+                                    <segment title="우리집"/>
                                 </segments>
                                 <connections>
                                     <action selector="sgChangeLocation:" destination="BYZ-38-t0r" eventType="valueChanged" id="6wX-y3-eZ2"/>
