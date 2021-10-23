@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wmG-9q-vU2">
+                                <rect key="frame" x="20" y="64" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="HZ3-W4-CnS"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="현재위치"/>
+                                    <segment title="폴리텍대학"/>
+                                    <segment title="이지스 퍼블리싱"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sgChangeLocation:" destination="BYZ-38-t0r" eventType="valueChanged" id="6wX-y3-eZ2"/>
+                                </connections>
+                            </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bmb-lI-DmH">
+                                <rect key="frame" x="20" y="119" width="374" height="670"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="670" id="OeE-CK-nn8"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfk-kI-ZTZ">
+                                <rect key="frame" x="20" y="809" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RID-EJ-OYP">
+                                <rect key="frame" x="20" y="838" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RID-EJ-OYP" firstAttribute="leading" secondItem="wmG-9q-vU2" secondAttribute="leading" id="4xk-6T-OFy"/>
+                            <constraint firstItem="RID-EJ-OYP" firstAttribute="top" secondItem="wfk-kI-ZTZ" secondAttribute="bottom" constant="5" id="DZd-jt-uA4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wmG-9q-vU2" secondAttribute="trailing" constant="20" id="EuC-Du-g4n"/>
+                            <constraint firstItem="bmb-lI-DmH" firstAttribute="trailing" secondItem="wmG-9q-vU2" secondAttribute="trailing" id="Hog-V7-K6v"/>
+                            <constraint firstItem="bmb-lI-DmH" firstAttribute="leading" secondItem="wmG-9q-vU2" secondAttribute="leading" id="K9v-Dh-GKW"/>
+                            <constraint firstItem="bmb-lI-DmH" firstAttribute="top" secondItem="wmG-9q-vU2" secondAttribute="bottom" constant="20" id="KZi-xN-Z5T"/>
+                            <constraint firstItem="RID-EJ-OYP" firstAttribute="trailing" secondItem="wmG-9q-vU2" secondAttribute="trailing" id="YqJ-TP-mPf"/>
+                            <constraint firstItem="wfk-kI-ZTZ" firstAttribute="top" secondItem="bmb-lI-DmH" secondAttribute="bottom" constant="20" id="ZwH-b3-zXG"/>
+                            <constraint firstItem="wmG-9q-vU2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kfh-dp-BIB"/>
+                            <constraint firstItem="wmG-9q-vU2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="l2Q-ZL-J0p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RID-EJ-OYP" secondAttribute="bottom" id="p7L-uM-mqG"/>
+                            <constraint firstItem="wfk-kI-ZTZ" firstAttribute="leading" secondItem="wmG-9q-vU2" secondAttribute="leading" id="wLt-g7-dJx"/>
+                            <constraint firstItem="wfk-kI-ZTZ" firstAttribute="trailing" secondItem="wmG-9q-vU2" secondAttribute="trailing" id="yBu-dd-W5A"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblLocationInfo1" destination="wfk-kI-ZTZ" id="fdr-Yv-cdv"/>
+                        <outlet property="lblLocationInfo2" destination="RID-EJ-OYP" id="1xW-d8-Kl9"/>
+                        <outlet property="myMap" destination="bmb-lI-DmH" id="T2E-tA-hZf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30" y="71"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
