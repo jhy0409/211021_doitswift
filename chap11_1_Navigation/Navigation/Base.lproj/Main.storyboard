@@ -44,6 +44,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZc-n0-7RN">
+                                <rect key="frame" x="20" y="335" width="172" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,6 +72,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imgView" destination="AZc-n0-7RN" id="lfI-Ij-5Jn"/>
                         <outlet property="txtMessage" destination="uWa-k9-1Ku" id="gPD-NX-hJg"/>
                     </connections>
                 </viewController>
@@ -99,16 +104,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtc-JU-ApO">
-                                <rect key="frame" x="20" y="155" width="87" height="27"/>
+                                <rect key="frame" x="20" y="218" width="87" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uI3-g2-eAp">
-                                <rect key="frame" x="20" y="187" width="374" height="34"/>
+                                <rect key="frame" x="20" y="250" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVb-eX-zmZ">
+                                <rect key="frame" x="345" y="167" width="51" height="31"/>
+                                <connections>
+                                    <action selector="swImageOnOff:" destination="hMx-PQ-27J" eventType="valueChanged" id="45t-by-eWt"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hey-Lz-9Ug"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -116,17 +127,20 @@
                             <constraint firstItem="hey-Lz-9Ug" firstAttribute="trailing" secondItem="N0x-BI-NZX" secondAttribute="trailing" constant="20" id="FD9-Ix-A5l"/>
                             <constraint firstItem="uI3-g2-eAp" firstAttribute="trailing" secondItem="N0x-BI-NZX" secondAttribute="trailing" id="NeQ-oc-VUA"/>
                             <constraint firstItem="Mtc-JU-ApO" firstAttribute="leading" secondItem="2Pd-He-gz4" secondAttribute="leading" id="PKC-50-QXb"/>
+                            <constraint firstItem="gVb-eX-zmZ" firstAttribute="trailing" secondItem="N0x-BI-NZX" secondAttribute="trailing" id="Ydx-ju-FbA"/>
                             <constraint firstItem="2Pd-He-gz4" firstAttribute="leading" secondItem="hey-Lz-9Ug" secondAttribute="leading" constant="20" id="Yod-LB-SdM"/>
                             <constraint firstItem="2Pd-He-gz4" firstAttribute="top" secondItem="hey-Lz-9Ug" secondAttribute="top" constant="20" id="dXl-hd-dVG"/>
                             <constraint firstItem="N0x-BI-NZX" firstAttribute="top" secondItem="2Pd-He-gz4" secondAttribute="top" id="eLw-L7-Fbe"/>
-                            <constraint firstItem="Mtc-JU-ApO" firstAttribute="top" secondItem="2Pd-He-gz4" secondAttribute="bottom" constant="20" id="eQR-DK-YWX"/>
                             <constraint firstItem="uI3-g2-eAp" firstAttribute="leading" secondItem="Mtc-JU-ApO" secondAttribute="leading" id="fqx-wP-2qB"/>
                             <constraint firstItem="uI3-g2-eAp" firstAttribute="top" secondItem="Mtc-JU-ApO" secondAttribute="bottom" constant="5" id="pQ7-Vg-8fb"/>
+                            <constraint firstItem="gVb-eX-zmZ" firstAttribute="top" secondItem="N0x-BI-NZX" secondAttribute="bottom" constant="20" id="x8W-W6-rbQ"/>
+                            <constraint firstItem="Mtc-JU-ApO" firstAttribute="top" secondItem="gVb-eX-zmZ" secondAttribute="bottom" constant="20" id="yAb-5f-1Qu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="수정 화면" id="mRF-7l-KV8"/>
                     <connections>
                         <outlet property="lblWay" destination="2Pd-He-gz4" id="6fx-gQ-7lh"/>
+                        <outlet property="swIsOn" destination="gVb-eX-zmZ" id="YwL-us-UUY"/>
                         <outlet property="txtMessage" destination="uI3-g2-eAp" id="ZfI-HX-ddA"/>
                     </connections>
                 </viewController>
