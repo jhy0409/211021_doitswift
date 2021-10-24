@@ -44,6 +44,7 @@ class ViewController: UIViewController, EditDelegate {
         txtMessage.text = message // 뷰컨 텍스트필드에 할당
     }
     
+    // MARK: - 아래 수정버튼
     @IBAction func btnGoEdit(_ sender: UIButton) {
         let editViewController = self.storyboard?.instantiateViewController(identifier: "View2") as! EditViewController
         self.navigationController?.pushViewController(editViewController, animated: true)
@@ -88,6 +89,7 @@ class ViewController: UIViewController, EditDelegate {
             }
             print("Zoom: false")
         }
+        print("🟢 isZoom : \(isZoom) \nVC self.isZoom : \(self.isZoom) / self.orgZoom : \(self.orgZoom)")
     }
 }
 

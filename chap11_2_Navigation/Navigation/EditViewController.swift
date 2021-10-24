@@ -34,10 +34,11 @@ class EditViewController: UIViewController {
         swIsOn.isOn = isOn
         
         if isZoom {
-            btnZoom.setTitle("확대", for: UIControl.State())
-        } else {
             btnZoom.setTitle("축소", for: UIControl.State())
+        } else {
+            btnZoom.setTitle("확대", for: UIControl.State())
         }
+        print("🔴 viewDidLoad - isZoom : \(isZoom)")
     }
     
     @IBAction func btnDone(_ sender: UIButton) { 
@@ -45,6 +46,7 @@ class EditViewController: UIViewController {
             delegate?.didMessageEditDone(self, message: txtMessage.text!)
             delegate?.didImageOnOffDone(self, isOn: isOn)
             delegate?.didImageZoomDone(self, isZoom: isZoom)
+            print("🟠 func btnDone - isZoom : \(isZoom)")
         }
         navigationController?.popViewController(animated: true) // 메인화면으로 이동
     }
@@ -60,11 +62,12 @@ class EditViewController: UIViewController {
     @IBAction func btnImageZoom(_ sender: UIButton) {
         if isZoom {
             isZoom = false
-            btnZoom.setTitle("축소", for: UIControl.State())
+            btnZoom.setTitle("확대", for: UIControl.State())
         } else {
             isZoom = true
-            btnZoom.setTitle("확대", for: UIControl.State())
+            btnZoom.setTitle("축소", for: UIControl.State())
         }
+        print("🟡 btnImageZoom - isZoom : \(isZoom) ")
     }
     
     /*
