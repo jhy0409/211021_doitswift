@@ -184,7 +184,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
             lblRecordTime.text = convertNSTimeInterval2String(0)
         }
         
-        selectAudioFile() // 확장자 서낵
+        selectAudioFile() // 확장자 선택
         if !isRecordMode { // 초기화
             initPlay()
         } else {
