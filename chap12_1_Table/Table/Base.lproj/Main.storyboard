@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Main View-->
         <scene sceneID="HHk-KQ-u3V">
             <objects>
-                <tableViewController id="F2t-1a-J92" sceneMemberID="viewController">
+                <tableViewController id="F2t-1a-J92" customClass="TableViewController" customModule="Table" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XxC-vq-rK5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hHX-1V-WZW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="hHX-1V-WZW">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hHX-1V-WZW" id="e0t-P7-ueU">
@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="6Ws-lF-XrP" kind="show" trigger="accessoryAction" id="KBR-Ly-NO8"/>
+                                    <segue destination="6Ws-lF-XrP" kind="show" identifier="sgDetail" id="j1a-OM-ogP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -34,45 +34,88 @@
                             <outlet property="delegate" destination="F2t-1a-J92" id="lig-3t-H5f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Frg-Ff-nA9">
+                    <navigationItem key="navigationItem" title="Main View" id="Frg-Ff-nA9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6WT-hu-faj">
                             <connections>
-                                <segue destination="llQ-Fu-tc4" kind="show" id="XjP-dH-90z"/>
+                                <segue destination="llQ-Fu-tc4" kind="show" id="LLS-k7-e8m"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="XxC-vq-rK5" id="Die-7s-9cM"/>
+                        <outlet property="tvListView" destination="XxC-vq-rK5" id="kcv-pf-xRV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0S-IW-qcc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="768.11594202898561" y="-19.419642857142858"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View-->
         <scene sceneID="WCp-CZ-LPo">
             <objects>
-                <viewController id="6Ws-lF-XrP" sceneMemberID="viewController">
+                <viewController id="6Ws-lF-XrP" customClass="DetailViewController" customModule="Table" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ila-Q9-b8y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2d-U9-uFL">
+                                <rect key="frame" x="186" y="138" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sHK-Ek-4eo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t2d-U9-uFL" firstAttribute="centerX" secondItem="sHK-Ek-4eo" secondAttribute="centerX" id="LPa-yk-6kE"/>
+                            <constraint firstItem="t2d-U9-uFL" firstAttribute="top" secondItem="sHK-Ek-4eo" secondAttribute="top" constant="50" id="yeM-ui-8yc"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="D9G-88-iRb"/>
+                    <navigationItem key="navigationItem" title="Detail View" id="D9G-88-iRb"/>
+                    <connections>
+                        <outlet property="lblItem" destination="t2d-U9-uFL" id="OUy-xI-wbw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qnb-BE-ZEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1590" y="383"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View-->
         <scene sceneID="xDO-Ov-P5s">
             <objects>
-                <viewController id="llQ-Fu-tc4" sceneMemberID="viewController">
+                <viewController id="llQ-Fu-tc4" customClass="AddViewController" customModule="Table" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mTy-XF-HEX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-iT-RQb">
+                                <rect key="frame" x="20" y="138" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFE-kx-ALp">
+                                <rect key="frame" x="192" y="196" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="btnAddItem:" destination="llQ-Fu-tc4" eventType="touchUpInside" id="grg-vt-Vak"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Mvj-BL-nGt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eFE-kx-ALp" firstAttribute="centerX" secondItem="3bH-iT-RQb" secondAttribute="centerX" id="HPD-VV-pKu"/>
+                            <constraint firstItem="Mvj-BL-nGt" firstAttribute="trailing" secondItem="3bH-iT-RQb" secondAttribute="trailing" constant="20" id="TRV-Id-BJq"/>
+                            <constraint firstItem="3bH-iT-RQb" firstAttribute="leading" secondItem="Mvj-BL-nGt" secondAttribute="leading" constant="20" id="kej-FW-HZA"/>
+                            <constraint firstItem="eFE-kx-ALp" firstAttribute="top" secondItem="3bH-iT-RQb" secondAttribute="bottom" constant="24" id="qFY-cw-XVI"/>
+                            <constraint firstItem="3bH-iT-RQb" firstAttribute="top" secondItem="Mvj-BL-nGt" secondAttribute="top" constant="50" id="zwb-jQ-lXV"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PHF-up-ZFP"/>
+                    <navigationItem key="navigationItem" title="Add View" id="PHF-up-ZFP"/>
+                    <connections>
+                        <outlet property="tvAddItem" destination="3bH-iT-RQb" id="ICy-hE-7Um"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LBE-pp-Wf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
