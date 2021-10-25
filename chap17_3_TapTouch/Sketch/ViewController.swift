@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var txtLineSize: UITextField!
     
     var lastPoint: CGPoint! // 마지막 터치 및 이동한 위치
     var lineSize: CGFloat = 2.0 // 선 두께
@@ -66,6 +67,30 @@ class ViewController: UIViewController {
         if motion == .motionShake {
             imgView.image = nil
         }
+    }
+    
+
+    @IBAction func txtEditChanged(_ sender: UITextField) {
+        if !(txtLineSize.text!.isEmpty) {
+            lineSize = CGFloat(Int(txtLineSize.text!)!)
+        }
+        txtLineSize.resignFirstResponder()
+    }
+    
+    @IBAction func btnChangeLineColorBlack(_ sender: UIButton) {
+        lineColor = UIColor.black.cgColor
+    }
+    
+    @IBAction func btnChangeLineColorRed(_ sender: UIButton) {
+        lineColor = UIColor.red.cgColor
+    }
+    
+    @IBAction func btnChangeLineColorGreen(_ sender: UIButton) {
+        lineColor = UIColor.green.cgColor
+    }
+    
+    @IBAction func btnChangeLineColorBlue(_ sender: UIButton) {
+        lineColor = UIColor.blue.cgColor
     }
 }
 
