@@ -31,10 +31,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     @IBOutlet weak var btnRecord: UIButton!
     @IBOutlet weak var lblRecordTime: UILabel!
     
+    @IBOutlet weak var imgView: UIImageView!
+    
     // MARK: - [ㅇ] 녹음 관련
     var audioRecorder : AVAudioRecorder!
     var isRecordMode = false
     
+    var imgPlay = UIImage(named: "play.png")
+    var imgStop = UIImage(named: "stop.png")
+    var imgRecord = UIImage(named: "record.png")
+    var imgPause = UIImage(named: "pause.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +54,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         } else { // 녹음모드
             initRecord()
         }
+        imgView.image = imgStop
     }
     
     // MARK: - [ㅇ] 녹음모드 여부에 따른 url분기
@@ -139,6 +146,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         audioPlayer.play()
         setPlayButtons(false, pause: true, stop: true)
         progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timePlayerSelector, userInfo: nil, repeats: true)
+        imgView.image = imgPlay
     }
     
     @objc func updatePlayTime() {
@@ -149,6 +157,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     @IBAction func btnPauseAudio(_ sender: UIButton) {
         audioPlayer.pause()
         setPlayButtons(true, pause: false, stop: true)
+        imgView.image = imgPause
     }
     
     @IBAction func btnStopAudio(_ sender: UIButton) {
@@ -157,6 +166,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         lblCurrentTime.text = convertNSTimeInterval2String(0)
         setPlayButtons(true, pause: false, stop: false)
         progressTimer.invalidate()
+        imgView.image = imgStop
     }
     
     // MARK: - [ㅇ] 볼륨
@@ -168,6 +178,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         progressTimer.invalidate()
         setPlayButtons(true, pause: false, stop: false)
+        imgView.image = imgStop
     }
     
     // MARK: - [ㅇ] 녹음 스위치 토글
@@ -199,12 +210,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
             sender.setTitle("Stop", for: UIControl.State())
             
             progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timeRecordSelector, userInfo: nil, repeats: true)
+            imgView.image = imgRecord
         } else {
             audioRecorder.stop()
             progressTimer.invalidate()
             btnPlay.isEnabled = true
             sender.setTitle("Record", for: UIControl.State())
             initPlay()
+            imgView.image = imgStop
         }
     }
     
