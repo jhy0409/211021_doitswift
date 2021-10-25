@@ -4,7 +4,7 @@
 - [<img src="https://raw.githubusercontent.com/jhy0409/jhy0409/9b83f40d3443d6f3fda66cba6eb05347de137bc2/9%20Tip/notion.svg" width=18px/> 책 내용 정리 - 노션](https://jhcode.notion.site/211021-Do-it-61bd728e25e04d3e917e6f620b02805d)
 
 ***
-### 공부일지 - 211021~
+### 공부일지 - 211021~211026
 전체 656p
 일자 | 페이지 | 진도율
 ---|---|---
