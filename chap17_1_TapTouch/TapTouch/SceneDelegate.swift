@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  DrawGraphics
+//  TapTouch
 //
-//  Created by Ho-Jeong Song on 2020/11/29.
+//  Created by inooph on 2021/10/25.
 //
 
 import UIKit
