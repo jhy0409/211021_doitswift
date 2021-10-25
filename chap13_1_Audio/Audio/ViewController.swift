@@ -15,6 +15,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     var progressTimer: Timer! // 타이머를 위한 변수
     let timePlayerSelector: Selector = #selector(ViewController.updatePlayTime)
     
+    let timeRecordSelector: Selector = #selector(ViewController.updateRecordTime)
+    
     // MARK: - [ㅇ] 현재재생 구간, 재생시간, 전체시간
     @IBOutlet weak var pvProgressPlay: UIProgressView!
     @IBOutlet weak var lblCurrentTime: UILabel!
@@ -192,6 +194,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
     }
     @IBAction func btnRecord(_ sender: UIButton) {
+        if sender.titleLabel?.text == "Record" {
+            audioRecorder.record()
+            sender.setTitle("Stop", for: UIControl.State())
+            
+            progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timeRecordSelector, userInfo: nil, repeats: true)
+        } else {
+            audioRecorder.stop()
+            progressTimer.invalidate()
+            btnPlay.isEnabled = true
+            sender.setTitle("Record", for: UIControl.State())
+            initPlay()
+        }
+    }
+    
+    @objc func updateRecordTime() {
+        lblRecordTime.text = convertNSTimeInterval2String(audioRecorder.currentTime)
     }
 }
 
