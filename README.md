@@ -44,6 +44,7 @@
 
 [도전! 미션] 알람 시계 만들기
 
+ <img src="https://github.com/jhy0409/211021_doitswift/blob/main/img/%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4_4.png?raw=true" width = "30%" height = "30%"></img>
 ### 07 웹 뷰로 간단한 웹 브라우저 만들기
 
 [도전! 미션] 웹 앱 만들기
@@ -56,6 +57,7 @@
 
 ## ✏️ 셋째마당 뷰 컨트롤러 기반프로그램 만들기
 
+ <img src="https://github.com/jhy0409/211021_doitswift/blob/main/img/%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4_5.png?raw=true" width = "30%" height = "30%"></img>
 ### 09 페이지 이동하기 - 페이지 컨트롤
 
 [도전! 미션] 페이지 이동 앱 만들기
@@ -64,6 +66,7 @@
 
 [도전! 미션] 새로운 탭 추가하기
 
+ <img src="https://github.com/jhy0409/211021_doitswift/blob/main/img/%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4_6.png?raw=true" width = "30%" height = "30%"></img>
 ### 11 내비게이션 컨트롤러 이용해 화면 전환하기
 
 [도전! 미션] 확대/축소 기능 추가하기 
@@ -76,14 +79,15 @@
 
 ## ✏️ 넷째마당 멀티미디어 활용하기
 
+ <img src="https://github.com/jhy0409/211021_doitswift/blob/main/img/%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4_7.png?raw=true" width = "30%" height = "30%"></img>
 ### 13 음악 재생하고 녹음하기
 
 [도전! 미션] 오디오 앱에 재생 상태 이미지추가하기
 
 ### 14 비디오 재생 앱 만들기
-
 [도전! 미션] 다른 포맷의 비디오 추가하기
 
+ <img src="https://github.com/jhy0409/211021_doitswift/blob/main/img/%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4_8.png?raw=true" width = "30%" height = "30%"></img>
 ### 15 카메라와 포토 라이브러리에서 미디어가져오기
 
 [도전! 미션] 콜라주 사진 만들기
@@ -96,6 +100,7 @@
 
 ## ✏️ 다섯째마당 이벤트와 제스처
 
+ <img src="https://github.com/jhy0409/211021_doitswift/blob/main/img/%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4_9.png?raw=true" width = "30%" height = "30%"></img>
 ### 17 탭과 터치 사용해 스케치 앱 만들기
 
 [도전! 미션] 스케치 앱에 색상과 두께를 변경하는기능 추가하기
