@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         pageControl.currentPageIndicatorTintColor = UIColor.red
         imgView.image = UIImage(named: images[0])
         
-        // MARK: - [] 스와이프 제스처
+        // MARK: - [ㅇ] 스와이프 제스처
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.respondToSwipeGesture(_:)))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(swipeLeft)
@@ -30,6 +30,15 @@ class ViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.respondToSwipeGesture(_:)))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
         self.view.addGestureRecognizer(swipeRight)
+        
+        // MARK: - [ㅇ] 핀치 제스처
+        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(ViewController.doPinch(_:)))
+        self.view.addGestureRecognizer(pinch)
+    }
+    
+    @objc func doPinch(_ pinch: UIPinchGestureRecognizer) {
+        imgView.transform = imgView.transform.scaledBy(x: pinch.scale, y: pinch.scale)
+        pinch.scale = 1
     }
     
     @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
@@ -39,6 +48,8 @@ class ViewController: UIViewController {
                 print("1-1. case left : \(pageControl.currentPage)")
                 if(pageControl.currentPage<pageControl.numberOfPages-1) {
                     pageControl.currentPage = pageControl.currentPage+1
+                } else {
+                    pageControl.currentPage = 0
                 }
                 print("1-2. case left : \(pageControl.currentPage)\n")
             
@@ -46,6 +57,8 @@ class ViewController: UIViewController {
                 print("2-1. case right : \(pageControl.currentPage)")
                 if(pageControl.currentPage>0) {
                     pageControl.currentPage = pageControl.currentPage - 1
+                } else {
+                    pageControl.currentPage = pageControl.numberOfPages - 1
                 }
                 print("2-2. case right : \(pageControl.currentPage)\n")
                 
