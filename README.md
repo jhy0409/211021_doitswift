@@ -16,6 +16,7 @@
 
 ## 📖 목차
 ## ✏️ 첫째마당 Hello! 아이폰 앱
+ <img src="https://github.com/jhy0409/211021_doitswift/blob/main/img/%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4_1.png?raw=true" width = "30%" height = "30%"></img>
 
 ### 01 아이폰 앱 개발 준비하기
 
@@ -24,6 +25,7 @@
 
 
 ## ✏️ 둘째마당 뷰 기반 프로그램 직접 만들기
+ <img src="https://github.com/jhy0409/211021_doitswift/blob/main/img/%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4_2.png?raw=true" width = "30%" height = "30%"></img>
 
 ### 03 원하는 이미지 화면에 출력하기 - 이미지 뷰
 
@@ -33,6 +35,7 @@
 
 [도전! 미션] 알람 시계 만들기
 
+ <img src="https://github.com/jhy0409/211021_doitswift/blob/main/img/%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4_3.png?raw=true" width = "30%" height = "30%"></img>
 ### 05 피커 뷰 사용해 원하는 항목 선택하기
 
 [도전! 미션] 멀티 컴포넌트 피커 뷰 만들기 
